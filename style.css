@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'Fira Code', monospace;
+    color: white;
+    background: #212121 url(assets/bg1440.webp) center/cover fixed;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#pfp {
+    border-radius: 25px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+#scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#scroll::after {
+    content: "↓";
+    font-size: 2rem;
+    animation: bounce 1s infinite;
+}
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    width: 90%;
+    max-width: 100vw;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    justify-content: center;
+}
+
+/* Remove centering on small screens */
+@media (max-width: 768px) {
+    #projects {
+        justify-content: flex-start; /* Align items to the left */
+    }
+}
+
+
+/* Hide scrollbar in WebKit browsers */
+#projects::-webkit-scrollbar {
+    display: none;
+}
+
+.project {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(33, 33, 33, 0.7);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0.5rem;
+    scroll-snap-align: start;
+    word-wrap: break-word;
+}
+
+.project img {
+    border-radius: 5px;
+}
+
+.project h6 {
+    font-size: medium;
+}
+
+.project p {
+    font-size: x-small;
+}
+
+.project a {
+    color: white;
+}
+
+/* Icons */
+#rust, #linux, #plasma, #windows, #css3, #js {
+    width: 2rem;
+}
+
+#html5 {
+    width: 2.5rem; /* can't find html5 logo without wordmark and otherwise it doesnt fit with the css logo xd */
+}
+
+#rust {
+    filter: invert(1);
+}
+
+#roblox-assets-extractor-img {
+    width: 15rem;
+}
+
+.bottom {
+    margin-top: auto; /* Pushes it to the bottom */
+    width: 100%; /* Ensures it spans full width */
+}
