@@ -9,7 +9,20 @@ body {
     font-family: 'Fira Code', monospace;
     color: white;
     background: #212121 url(assets/bg1440.webp) center/cover fixed;
+    scroll-behavior: smooth;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 section {
     min-height: 100vh;
@@ -23,6 +36,7 @@ section {
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
 }
 
 #pfp {
@@ -71,9 +85,14 @@ section {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        overflow-x: hidden;
     }
     section {
         font-size: 1.5rem;
+    }
+    .project {
+        max-width: 95%;
+        width: 100%;
     }
 }
 
@@ -92,7 +111,12 @@ section {
     margin: 0.5rem;
     scroll-snap-align: start;
     word-wrap: break-word;
+    transition: transform 0.3s ease-in-out;
 }
+
+.project:hover {
+    transform: scale(1.1);
+}   
 
 .project img {
     border-radius: 5px;
