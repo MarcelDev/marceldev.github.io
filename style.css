@@ -147,11 +147,25 @@ section {
     filter: invert(1);
 }
 
-#roblox-assets-extractor-img {
+#roextract-img {
     width: 15rem;
 }
 
 .bottom {
     margin-top: auto;
     width: 100%;
+}
+
+#contact a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+#contact a:hover,
+#contact a:focus {
+  border-bottom: 2px solid #ff6f61;
+  outline: none;
+  cursor: pointer;
 }

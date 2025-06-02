@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarcelDev</title>
     <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="MarcelDev">
+    <meta property="og:description" content="About MarcelDev">
+    <meta property="og:image" content="https://marceldev.xyz/assets/cover.webp">
+    <meta property="og:url" content="https://marceldev.xyz">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <link rel="icon" href="/assets/pfp.png" type="image/png">
 </head>
 <body>
     <main>
         <section>  <!-- scroll   -->
             <img src="assets/pfp.png" id="pfp">
             <h1>Hi, I'm Marcel!</h1>
-            <p id="scroll">scroll</p>
+            <p id="scroll">scroll down</p>
         </section> <!-- scroll   -->
         <section>  <!-- about    -->
             <h1>About me</h1>
@@ -19,7 +26,7 @@
                 My name is Marcel. I am a developer and gamer from Poland 🇵🇱. I know the programming languages:
             </p>
             <div class="stack">
-                <img src="assets/html5.svg" alt="HTML5", id="html5">
+                <img src="assets/html5.svg" alt="HTML5", id="html5", title="Not really a language, but whatever">
                 <img src="assets/css3.svg" alt="CSS", id="css3">
                 <img src="assets/js.svg" alt="JavaScript", id="js">
                 <a href="https://rust-lang.org"><img src="assets/rust.svg" alt="Rust" id="rust"></a>
@@ -41,7 +48,7 @@
 
             <div id="projects">
                 <div class="project">
-                    <img src="assets/plasma_rpc.png">
+                    <img src="assets/plasma_rpc.png" alt="Screenshot of Plasma Discord RPC">
                     <div class="bottom">
                         <a href="https://github.com/MarcelDev/kde-plasma-discord-rpc"><h6>KDE Plasma Discord Rich Presence</h6></a>
                         <div class="stack">
@@ -49,13 +56,13 @@
                             <a href="https://kernel.org"><img src="assets/linux.svg" alt="Linux" id="linux"></a>
                             <a href="https://kde.org"><img src="assets/plasma.svg" alt="KDE Plasma" id="plasma"></a>
                         </div>
-                        <p>Discord rich presence for KDE Plasma</p>
+                        <p>Show your KDE, distro and kernel versions in Discord.</p>
                     </div>
                 </div>
                 <div class="project">
-                    <img src="assets/roblox-assets-extractor.png" id="roblox-assets-extractor-img">
+                    <img src="assets/roextract.png" id="roextract-img" alt="Screenshot of RoExtract">
                     <div class="bottom">
-                        <a href="https://github.com/AeEn123/Roblox-assets-extractor"><h6>Roblox Assets Extractor</h6></a>
+                        <a href="https://github.com/AeEn123/RoExtract"><h6>RoExtract</h6></a>
                         <div class="stack">
                             <a href="https://rust-lang.org"><img src="assets/rust.svg" alt="Rust" id="rust"></a>
                             <a href="https://kernel.org"><img src="assets/linux.svg" alt="Linux" id="linux"></a>
@@ -67,7 +74,7 @@
                 </div>
             </div>
         </section> <!-- projects -->
-        <section>  <!-- contact  -->
+        <section id="contact">  <!-- contact  -->
             <h1>Contact me</h1>
             <h1>
                 <a href="https://t.me/Marcel209">Telegram: Marcel209</a>
