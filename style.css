@@ -12,18 +12,6 @@ body {
     scroll-behavior: smooth;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0.01;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 section {
     min-height: 100vh;
     scroll-snap-align: start;
@@ -36,7 +24,6 @@ section {
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     box-sizing: border-box;
-    animation: fadeIn 1s ease-in-out;
 }
 
 #pfp {
