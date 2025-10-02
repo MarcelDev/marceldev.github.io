@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarcelDev</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div id="profile">
+        <img id="pfp" src="assets/pfp.webp" />
+        <div>
+          <h1 id="username">marcel</h1>
+          <p id="aka">aka. MarcelDev</p>
+        </div>
+      </div>
+      <p>programmer and gamer from poland 🇵🇱</p>
+      <p id="time">my time: </p>
+      <p class="section-title">socials</p>
+      <div id="socials">
+        <a
+          href="https://discord.com/users/1302902119115915348"
+          class="link-btn"
+        >
+          <img src="assets/discord.svg" class="icon" />
+          <p>discord</p>
+        </a>
+        <a href="https://t.me/marceldev69" class="link-btn">
+          <img src="assets/tg.svg" class="icon" />
+          <p>telegram</p>
+        </a>
+        <a href="https://steamcommunity.com/id/marceldevreal" class="link-btn">
+          <img src="assets/steam.svg" class="icon" />
+          <p>steam</p>
+        </a>
+        <a href="https://github.com/MarcelDev" class="link-btn">
+          <img src="assets/github.svg" class="icon" />
+          <p>github</p>
+        </a>
+      </div>
+      <p class="section-title">tech</p>
+      <div id="tech">
+        <p>OS</p>
+        <div id="oses">
+          <a href="https://kernel.org" class="link-btn">
+            <img src="assets/linux.svg" class="icon" />
+            <p>linux</p>
+          </a>
+          <a href="https://www.microsoft.com/en-us/windows" class="link-btn">
+            <img src="assets/windows.svg" class="icon" />
+            <p>windows 11 iot enterprise ltsc</p>
+          </a>
+        </div>
+        <p>langs</p>
+        <div id="langs">
+          <a href="https://rust-lang.org" class="link-btn">
+            <img src="assets/rust.svg" class="icon" />
+            <p>rust</p>
+          </a>
+          <a class="link-btn">
+            <img src="assets/html5.svg" class="icon" />
+            <p>html</p>
+          </a>
+          <a class="link-btn">
+            <img src="assets/css3.svg" class="icon" />
+            <p>css</p>
+          </a>
+          <a class="link-btn">
+            <img src="assets/js.svg" class="icon" />
+            <p>js</p>
+          </a>
+        </div>
+      </div>
+    </main>
+    <script>
+        function updateTime() {
+            const timeDisplay = document.getElementById('time');
+
+            const now = new Date();
+
+            const timeOptions = {
+            timeZone: "Europe/Warsaw",
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true,
+            };
+            const myTime = new Intl.DateTimeFormat('en-US', timeOptions).format(now);
+            timeDisplay.textContent = `my time: ${myTime}`
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+  </body>
+</html>
